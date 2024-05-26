@@ -745,7 +745,7 @@ export default function CreateHDWalletScreen() {
     addressType: AddressType.P2WPKH,
     step1Completed: false,
     tabType: TabType.STEP1,
-    restoreWalletType: RestoreWalletType.UNISAT,
+    restoreWalletType: RestoreWalletType.MACH,
     isRestore: isImport,
     isCustom: false,
     customHdPath: '',

@@ -1,15 +1,7 @@
 {
-  "name": "unisat-extension",
+  "name": "mach-extension",
   "version": "1.3.3",
   "private": true,
-  "homepage": "https://github.com/unisat-wallet/extension#readme",
-  "bugs": {
-    "url": "https://github.com/unisat-wallet/extension/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/unisat-wallet/extension.git"
-  },
   "scripts": {
     "clean": "mkdir -p dist && rm -rf dist/* && cp -r build/_raw/* dist",
     "build:chrome:dev": "webpack --progress --env browser=chrome manifest=mv2 config=dev channel=github version=0.0.0",

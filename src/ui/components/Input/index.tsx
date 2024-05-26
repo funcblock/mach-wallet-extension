@@ -285,7 +285,7 @@ export const AddressInput = (props: InputProps) => {
     <div style={{ alignSelf: 'stretch' }}>
       <div style={Object.assign({}, $baseContainerStyle, { flexDirection: 'column', minHeight: '56.5px' })}>
         <input
-          placeholder={'Address or name (sats, unisat, ...) '}
+          placeholder={'Address or name (sats, mach, ...) '}
           type={'text'}
           style={Object.assign({}, $baseInputStyle, $inputStyleOverride)}
           onChange={async (e) => {

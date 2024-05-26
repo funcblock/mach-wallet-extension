@@ -18,9 +18,9 @@ const palette = {
   green: '#41B530',
   green_light: '#5ec04f',
 
-  yellow_dark: '#d5ac00',
-  yellow: '#e3bb5f',
-  yellow_light: '#fcd226',
+  yellow_dark: '#e2dffe',
+  yellow: '#ab9ff2',
+  yellow_light: '#ab47bc',
 
   red_dark: '#c92b40',
   red: '#ED334B',
@@ -30,11 +30,11 @@ const palette = {
   blue: '#1872F6',
   blue_light: '#c6dcfd',
 
-  orange_dark: '#d9691c',
-  orange: '#FF7B21',
-  orange_light: '#ff8f42',
+  orange_dark: '#6a1b9a',
+  orange: '#9c27b0',
+  orange_light: '#ab47bc',
 
-  gold: '#eac249'
+  gold: '#7b1fa2'
 };
 
 export const colors = Object.assign({}, palette, {
@@ -60,7 +60,7 @@ export const colors = Object.assign({}, palette, {
 
   border: 'rgba(255,255,255,0.1)',
 
-  icon_yellow: '#FFBA33',
+  icon_yellow: '#ab47bc',
 
   brc20_deploy: '#233933',
   brc20_transfer: '#375e4d',
