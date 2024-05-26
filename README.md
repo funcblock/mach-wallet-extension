@@ -1,3 +1,3 @@
-# mach Wallet
+# Mach Wallet
 
 fork from UniSat Wallet
