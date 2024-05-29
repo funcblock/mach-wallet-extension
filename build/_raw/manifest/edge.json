@@ -1,6 +1,6 @@
 {
   "externally_connectable": {
-    "matches": ["https://mach.io/*"],
+    "matches": ["https://unisat.io/*"],
     "ids": ["*"]
   },
   "minimum_chrome_version": "66"

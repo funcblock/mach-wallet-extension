@@ -235,7 +235,7 @@ export const WALLETCONNECT_STATUS_MAP = {
   FAILD: 6
 };
 
-export const INTERNAL_REQUEST_ORIGIN = 'https://mach.io';
+export const INTERNAL_REQUEST_ORIGIN = 'https://unisat.io';
 
 export const INTERNAL_REQUEST_SESSION = {
   name: 'Match Wallet',
@@ -243,8 +243,8 @@ export const INTERNAL_REQUEST_SESSION = {
   icon: './images/logo/new_logo.png'
 };
 
-export const OPENAPI_URL_MAINNET = 'https://wallet-api.mach.io/v5';
-export const OPENAPI_URL_TESTNET = 'https://wallet-api-testnet.mach.io/v5';
+export const OPENAPI_URL_MAINNET = 'https://wallet-api.unisat.io/v5';
+export const OPENAPI_URL_TESTNET = 'https://wallet-api-testnet.unisat.io/v5';
 
 export const EVENTS = {
   broadcastToUI: 'broadcastToUI',

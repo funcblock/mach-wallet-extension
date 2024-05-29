@@ -23,11 +23,11 @@
     "default_title": "__MSG_appName__"
   },
 
-  "author": "https://mach.io",
+  "author": "https://unisat.io",
   "background": {
     "service_worker": "background.js"
   },
-  "homepage_url": "https://mach.io",
+  "homepage_url": "https://unisat.io",
   "permissions": ["storage", "unlimitedStorage", "activeTab"],
   "short_name": "__MSG_appName__",
 

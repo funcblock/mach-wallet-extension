@@ -86,9 +86,9 @@ export function useTxIdUrl(txid: string) {
 export function useUnisatWebsite() {
   const networkType = useNetworkType();
   if (networkType === NetworkType.MAINNET) {
-    return 'https://mach.io';
+    return 'https://unisat.io';
   } else {
-    return 'https://testnet.mach.io';
+    return 'https://testnet.unisat.io';
   }
 }
 

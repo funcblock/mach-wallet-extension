@@ -39,7 +39,7 @@ function TabButton({ tabName, icon, isActive }: { tabName: TabOption; icon: Icon
           navigate('SettingsTabScreen');
         }
       }}>
-      <Icon icon={icon} color={isActive ? 'white' : 'white_muted'} />
+      <Icon icon={icon} size={20} color={isActive ? 'white' : 'white_muted'} />
       <BaseView style={{ position: 'relative' }}>
         {tabName === 'app' && unreadApp && (
           <BaseView
