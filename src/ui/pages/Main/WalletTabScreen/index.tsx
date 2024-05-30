@@ -166,7 +166,7 @@ export default function WalletTabScreen() {
             onClick={() => {
               navigate('SwitchKeyringScreen');
             }}>
-            <Text text={currentKeyring.alianName} size="xxs" />
+            <Text text={currentKeyring.alianName} size="sm" />
           </Card>
         }
       />
@@ -254,6 +254,17 @@ export default function WalletTabScreen() {
                 navigate('ReceiveScreen');
               }}
               full
+              style={{
+                padding: 16,
+                display: 'flex',
+                flexDirection: 'column',
+                columnGap: 6,
+                borderRadius: 12
+              }}
+              textStyle={{
+                marginTop: 6,
+                fontWeight: 500
+              }}
             />
 
             <Button
@@ -265,6 +276,17 @@ export default function WalletTabScreen() {
                 navigate('TxCreateScreen');
               }}
               full
+              style={{
+                padding: 16,
+                display: 'flex',
+                flexDirection: 'column',
+                columnGap: 6,
+                borderRadius: 12
+              }}
+              textStyle={{
+                marginTop: 6,
+                fontWeight: 500
+              }}
             />
             <Button
               text="Buy"
@@ -274,6 +296,17 @@ export default function WalletTabScreen() {
                 setBuyBtcModalVisible(true);
               }}
               full
+              style={{
+                padding: 16,
+                display: 'flex',
+                flexDirection: 'column',
+                columnGap: 6,
+                borderRadius: 12
+              }}
+              textStyle={{
+                marginTop: 6,
+                fontWeight: '500'
+              }}
             />
           </Row>
 
