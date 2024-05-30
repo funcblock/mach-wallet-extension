@@ -171,7 +171,7 @@ export default function WalletTabScreen() {
         }
       />
 
-      <Content>
+      <Content classname='hide-scrollbar'>
         <Column gap="xl">
           {currentKeyring.type === KEYRING_TYPE.HdKeyring && <AccountSelect />}
           {currentKeyring.type === KEYRING_TYPE.KeystoneKeyring && <AccountSelect />}
