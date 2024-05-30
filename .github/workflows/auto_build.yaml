@@ -2,11 +2,7 @@ name: Create Release
 
 on:
   push:
-    tags:
-      - v*
-  pull_request:
-    tags:
-      - v*
+    branches: [main]
 
 jobs:
   build:
@@ -18,47 +14,51 @@ jobs:
 
       - name: Build Chrome
         run: |
-          yarn build:chrome
           yarn build:chrome:mv3
-
-      - name: Create Release
-        id: create_release
-        uses: actions/create-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Upload package
+        uses: actions/upload-artifact@v4
         with:
-          tag_name: ${{ github.ref }}
-          release_name: Release ${{ github.ref }}
-          draft: false
-          prerelease: false
+          name: mach
+          path: mach-chrome-mv3-v1.3.3.zip
 
-      - name: Get Version Name
-        uses: actions/github-script@v3
-        id: get-version
-        with:
-          script: |
-            const str=process.env.GITHUB_REF;
-            return str.substring(str.indexOf("v"));
-          result-encoding: string
+      # - name: Create Release
+      #   id: create_release
+      #   uses: actions/create-release@v1
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      #   with:
+      #     tag_name: ${{ github.ref }}
+      #     release_name: Release ${{ github.ref }}
+      #     draft: false
+      #     prerelease: false
 
-      - name: Upload Asset
-        id: upload-asset1
-        uses: actions/upload-release-asset@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: dist/mach-chrome-mv2-${{steps.get-version.outputs.result}}.zip
-          asset_name: mach-chrome-mv2-${{steps.get-version.outputs.result}}.zip
-          asset_content_type: application/zip
+      # - name: Get Version Name
+      #   uses: actions/github-script@v3
+      #   id: get-version
+      #   with:
+      #     script: |
+      #       const str=process.env.GITHUB_REF;
+      #       return str.substring(str.indexOf("v"));
+      #     result-encoding: string
 
-      - name: Upload Asset
-        id: upload-asset2
-        uses: actions/upload-release-asset@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: dist/mach-chrome-mv3-${{steps.get-version.outputs.result}}.zip
-          asset_name: mach-chrome-mv3-${{steps.get-version.outputs.result}}.zip
-          asset_content_type: application/zip
+      # - name: Upload Asset
+      #   id: upload-asset1
+      #   uses: actions/upload-release-asset@v1
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      #   with:
+      #     upload_url: ${{ steps.create_release.outputs.upload_url }}
+      #     asset_path: dist/mach-chrome-mv2-${{steps.get-version.outputs.result}}.zip
+      #     asset_name: mach-chrome-mv2-${{steps.get-version.outputs.result}}.zip
+      #     asset_content_type: application/zip
+
+      # - name: Upload Asset
+      #   id: upload-asset2
+      #   uses: actions/upload-release-asset@v1
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      #   with:
+      #     upload_url: ${{ steps.create_release.outputs.upload_url }}
+      #     asset_path: dist/mach-chrome-mv3-${{steps.get-version.outputs.result}}.zip
+      #     asset_name: mach-chrome-mv3-${{steps.get-version.outputs.result}}.zip
+      #     asset_content_type: application/zip
