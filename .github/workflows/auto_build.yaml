@@ -49,5 +49,5 @@ jobs:
       - name: Upload package
         uses: actions/upload-artifact@v4
         with:
-          name: mach-chrome-mv3-${{steps.get-version.outputs.result}}.zip
-          path: ./dist/mach-chrome-mv3-${{steps.get-version.outputs.result}}.zip
+          name: mach-chrome
+          path: ./dist/mach-chrome-mv3-v1.3.3.zip
