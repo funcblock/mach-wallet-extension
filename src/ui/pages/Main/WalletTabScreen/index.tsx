@@ -163,6 +163,7 @@ export default function WalletTabScreen() {
         RightComponent={
           <Card
             preset="style2"
+            style={{ background: '#383838' }}
             onClick={() => {
               navigate('SwitchKeyringScreen');
             }}>
@@ -171,7 +172,7 @@ export default function WalletTabScreen() {
         }
       />
 
-      <Content classname='hide-scrollbar'>
+      <Content classname="hide-scrollbar" style={{ paddingTop: 8 }}>
         <Column gap="xl">
           {currentKeyring.type === KEYRING_TYPE.HdKeyring && <AccountSelect />}
           {currentKeyring.type === KEYRING_TYPE.KeystoneKeyring && <AccountSelect />}

@@ -31,13 +31,13 @@ export function Header(props: HeaderProps) {
     }
   }, [title]);
   return (
-    <div style={{ display: 'block' }}>
+    <div style={{ display: 'block', backgroundColor: '#222222', borderBottom: '1px solid rgb(50, 50, 50)' }}>
       <Row
         justifyBetween
         itemsCenter
         style={{
-          height: '67.5px',
-          padding: 15
+          height: '48px',
+          padding: '10px 16px'
         }}>
         <Row full>
           <Column selfItemsCenter>
