@@ -14,8 +14,8 @@ const AccountSelect = () => {
   return (
     <Row
       justifyBetween
-      px="md"
-      py="md"
+      px="lg"
+      py="lg"
       bg="card"
       rounded
       onClick={(e) => {
