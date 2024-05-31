@@ -13,13 +13,13 @@ jobs:
       - uses: ./.github/actions/setup
 
       - name: Build Chrome
-        run: |
-          yarn build:chrome:mv3
+        run: yarn build:chrome:mv3
+
       - name: Upload package
         uses: actions/upload-artifact@v4
         with:
           name: mach
-          path: ./dist/mach-chrome-mv3-v1.3.3.zip
+          path: /dist/mach-chrome-mv3-v1.3.3.zip
 
       # - name: Create Release
       #   id: create_release
