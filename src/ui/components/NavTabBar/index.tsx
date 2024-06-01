@@ -10,7 +10,7 @@ import { Icon, IconTypes } from '../Icon';
 
 export function NavTabBar({ tab }: { tab: TabOption }) {
   return (
-    <Grid columns={4} style={{ width: '100%', height: '67.5px', backgroundColor: colors.bg2 }}>
+    <Grid columns={4} style={{ width: '100%', height: '60px', backgroundColor: colors.bg2 }}>
       <TabButton tabName="home" icon="wallet" isActive={tab === 'home'} />
       <TabButton tabName="mint" icon="compass" isActive={tab === 'mint'} />
       <TabButton tabName="app" icon="grid" isActive={tab === 'app'} />
@@ -39,7 +39,7 @@ function TabButton({ tabName, icon, isActive }: { tabName: TabOption; icon: Icon
           navigate('SettingsTabScreen');
         }
       }}>
-      <Icon icon={icon} size={20} color={isActive ? 'white' : 'white_muted'} />
+      <Icon icon={icon} size={22} color={isActive ? 'white' : 'white_muted'} />
       <BaseView style={{ position: 'relative' }}>
         {tabName === 'app' && unreadApp && (
           <BaseView
